@@ -8,10 +8,8 @@ const
         replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }
     };
 
-//mongoose.connect(consts.MLAB_KEY,options);
 
 
-//router.get('/playlist', function(req, res, next){
 exports.getAllSongs = (req,res)=>{
     Song.find({}, function(err,songs){
         if(err){
@@ -24,12 +22,12 @@ exports.getAllSongs = (req,res)=>{
 };
 
 exports.getAllAlbums = (req,res)=>{
-    Album.find({}, function(err,songs){
+    Album.find({}, function(err,albums){
         if(err){
             console.log(`Problem :: err -> ${err}`);
             return res.status(404).send(err);
         }
-        console.log(songs);
+        console.log(albums);
         return res.status(200).send(albums);
     });
 };
