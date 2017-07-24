@@ -2,7 +2,7 @@ const mongoose = require('mongoose'),
       schema = mongoose.Schema,
       autoIncrement = require('../database'),
 
-    AlbumSchema = new schema({
+    albumSchema = new schema({
         albumImg : {type:String, index:1, required:true, unique:true},
         albumName : String,
         djName : String,
