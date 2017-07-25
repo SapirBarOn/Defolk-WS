@@ -7,7 +7,8 @@ const mongoose = require('mongoose'),
         singerName : String,
         name : String,
         time : String,
-        likes : Number
+        likes : Number,
+        songImg : String
     },{collection:'songs'}),
 
     SongSchema = mongoose.model('SongSchema',songSchema);
