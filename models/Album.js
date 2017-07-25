@@ -7,7 +7,7 @@ const mongoose = require('mongoose'),
         albumName : String,
         djName : String,
         djImg : String,
-        followers : Number
+        followers : String
     },{collection:'albums'}),
 
     AlbumSchema = mongoose.model('AlbumSchema',albumSchema);
