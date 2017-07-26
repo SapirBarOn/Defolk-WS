@@ -28,6 +28,7 @@ app.get('/includes/style.css', (req, res) => {
 
 app.get('/getAllSongs', playlistController.getAllSongs);
 app.get('/getAllAlbums', playlistController.getAllAlbums);
+app.get('/getAllComments', playlistController.getAllComments);
 
 app.all('*', (req, res) => {
     res.status(404).send(`Got Lost? This is a friendly 404 Page`);
